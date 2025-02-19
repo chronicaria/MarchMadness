@@ -9,3 +9,5 @@ March_Madness_Simulator.py: Simulates remaining games, then the tournament. Tour
 Tournament_Results.py: Prints the results from tournament_progress.csv
 
 Schedule_Cleaner.py: Cleans 2025_schedule.csv -> 2025_cleaned_schedule.csv
+
+Markov.py: Work in Progress. Trying to generate offensive and defensive ratings for each team using Google's PageRank Markov chain system.

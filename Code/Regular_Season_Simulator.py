@@ -2,7 +2,7 @@
 import csv
 import numpy as np
 
-results = 'Team_ELOs.csv'  
+results = 'Data/Team_ELOs.csv'  
 rating_data = []
 with open(results, newline='') as file:
     csv_reader = csv.reader(file)
@@ -18,7 +18,7 @@ rating_dict = {}
 for i in rating_data:
     rating_dict[i[0]] = float(i[1])
 
-schedule = '2025_cleaned_schedule.csv'
+schedule = 'Data/2025_cleaned_schedule.csv'
 schedule_data = []
 with open(schedule, newline='') as file:
     csv_reader = csv.reader(file)
@@ -34,6 +34,8 @@ k = 60
 home_advantage = 150
 spread_factor = 40
 error_sd = 8.953
+
+start_date = "2025-02-19"
 
 record_data = {} # Team, array[win, loss]
 for i in rating_dict:
@@ -79,7 +81,7 @@ for i, (team, elo) in enumerate(sorted_teams, start=1):
     print(f"{i}. {team} ({wins}-{losses}): {elo:.2f}")
 
 # Save to CSV
-with open('Final_Team_ELOs.csv', mode='w', newline='') as file:
+with open('Data/Final_Team_ELOs.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(["Ranking", "Team", "Wins", "Losses", "ELO"])
     for i, (team, elo) in enumerate(sorted_teams, start=1):

@@ -3,7 +3,7 @@ import numpy as np
 import copy
 
 # --- Read Team Data ---
-with open('Final_Team_ELOs.csv', newline='') as file:
+with open('Data/Final_Team_ELOs.csv', newline='') as file:
     csv_reader = csv.reader(file)
     headers = next(csv_reader)  # Skip header row
     team_data = list(csv_reader)
@@ -55,13 +55,13 @@ def simulate_game(team_A, team_B, location):
     return Win_A  # 1 if team_A wins, 0 if team_B wins
 
 # --- Read Schedule Data ---
-with open('2025_cleaned_schedule.csv', newline='') as file:
+with open('Data/2025_cleaned_schedule.csv', newline='') as file:
     csv_reader = csv.reader(file)
     headers = next(csv_reader)
     schedule_data = list(csv_reader)
 
 # --- Read Bracket Data ---
-with open('Bracket.csv', newline='') as file:
+with open('Data/Bracket.csv', newline='') as file:
     csv_reader = csv.reader(file)
     headers = next(csv_reader)
     bracket_data = list(csv_reader)
@@ -69,9 +69,10 @@ with open('Bracket.csv', newline='') as file:
 # Region,Seed,Team
 # e.g., South,1,Auburn
 
-start_date = "2025-02-18"  # Only simulate games on or after this date
+start_date = "2025-02-19"  # Only simulate games on or after this date
 simulations = 10000
 simulation_records = {}  # Cumulative simulation records for season stats
+game_results = {}
 
 # --- Setup Tournament Bracket ---
 # Create a 4x16 array for regions (order: South, Midwest, West, East)
@@ -113,11 +114,22 @@ for i in range(simulations):
     
     # --- Regular Season Simulation ---
     for game in schedule_data:
-        # Expecting schedule rows: Date, Home Team, Home Score, Away Team, Away Score, Neutral
         if game[0] < start_date:
             continue
+
+        home_team = game[1]
+        away_team = game[3]
         location = "N" if (len(game) >= 6 and game[5].strip().upper() == "N") else "H"
-        simulate_game(game[1], game[3], location)
+
+        winner = simulate_game(home_team, away_team, location)
+
+        if (game[0], home_team, away_team, location) not in game_results:
+            game_results[(game[0], home_team, away_team, location)] = [0, 0]
+
+        if winner == 1:
+            game_results[(game[0], home_team, away_team, location)][0] += 1  # Home team win
+        else:
+            game_results[(game[0], home_team, away_team, location)][1] += 1  # Away team win
     
     # --- Bracket Simulation (First Four Example) ---
     update_bracket(11, 12, 0, 11)  # South: 12th seed matchup
@@ -231,7 +243,7 @@ for team in simulation_records:
     simulation_records[team] = [round(stat / simulations, 2) for stat in simulation_records[team]]
 
 # --- Export Tournament Progress Dictionary to CSV ---
-with open('tournament_progress.csv', 'w', newline='') as csvfile:
+with open('Data/tournament_progress.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(['Team', 't64', 't32', 't16', 't8', 't4', 't2', 't1'])
     for team, counts in tournament_progress.items():
@@ -243,3 +255,10 @@ for i, (team, stats) in enumerate(sorted_teams, 1):
     wins, losses, elo = stats
     # Uncomment the line below to print season results:
     # print(f"{i}. {team} ({wins}-{losses}): {elo} ELO")
+
+# --- Export Game Results to CSV ---
+with open('Data/game_simulation_results.csv', 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['Date', 'Home Team', '# of Home Team Wins', 'Away Team', '# of Away Team Wins', 'Neutral'])
+    for (date, home_team, away_team, location), (home_wins, away_wins) in game_results.items():
+        writer.writerow([date, home_team, home_wins, away_team, away_wins, location])

@@ -1,16 +1,12 @@
 # Men's
-# 11.474, 0.3, 8.966
-# 12.297, 0.296, 9.592
+# 11.458, 0.3, 8.953 -> 11.462, 0.304, 8.752
 
-# Women's
-# 12.992, 0.344, 9.726
-# 14.213, 0.384, 10.489
 
 # 1. Convert CSV into 2-D List, skipping the header
 import csv
 import numpy as np
 
-results = 'full_results.csv'  
+results = 'Data/full_results.csv'  
 game_data = []
 with open(results, newline='') as file:
     csv_reader = csv.reader(file)
@@ -19,15 +15,17 @@ with open(results, newline='') as file:
         game_data.append(row)
 
 # 2. ELO Variables
-base_ELO = 1000
+base_ELO = 1500
 reversion_factor = 1/3
-k = 60
-home_advantage = 150
+k = 50
+home_advantage = 140
 spread_factor = 40
+in_conference_multiplier = 0.75
+out_conference_multiplier = 1.25
 
 # 3. Find the Teams and Index them
 team_data =[]
-team_ids = 'data/MTeams.csv'
+team_ids = 'Data/MTeams.csv'
 with open(team_ids, newline='') as file:
     csv_reader = csv.reader(file)
     for row in csv_reader:
@@ -46,7 +44,7 @@ for game in game_data:
 
 brier_scores = []
 error_list = []
-def calculate_elos(Rating_A, Rating_B, Score_A, Score_B, WLoc):
+def calculate_elos(Rating_A, Rating_B, Score_A, Score_B, WLoc, Conf):
     local_home_advantage = home_advantage
     if (WLoc == "A"):
         local_home_advantage = -1*local_home_advantage
@@ -65,7 +63,13 @@ def calculate_elos(Rating_A, Rating_B, Score_A, Score_B, WLoc):
     error_list.append(spread_differential)
 
     # multiplier = 1  # Simplified for this example
+    # if in-conference vs out-of-conference
     multiplier = np.log(Pd/3 + 1) * (2 / ((Rating_A - Rating_B)*.001+2)) #2.2
+    if (Conf == "Yes"):
+        multiplier *= in_conference_multiplier
+    else:
+        multiplier *= out_conference_multiplier
+
     Expected_A = 1 / (1 + 10**((Rating_B - (Rating_A + local_home_advantage))/500))
     Expected_B = 1 / (1 + 10**(((Rating_A + local_home_advantage) - Rating_B)/500))
     brier_scores.append((Expected_A - Win_A)**2)
@@ -74,7 +78,7 @@ def calculate_elos(Rating_A, Rating_B, Score_A, Score_B, WLoc):
     New_Rating_B = Rating_B + (k * multiplier) * (Win_B - Expected_B) 
     return [New_Rating_A, New_Rating_B]
 
-conferences = 'data/MTeamConferences.csv' 
+conferences = 'Data/MTeamConferences.csv' 
 conference_data = []
 with open(conferences, newline='') as file:
     csv_reader = csv.reader(file)
@@ -105,6 +109,17 @@ def yearly_reset():
 
         for id in id_list: # reversion to conf average
             team_ELOs[id] -= (team_ELOs[id] - conf_avg) * reversion_factor
+def are_teams_in_same_conf(confs, team_a, team_b):
+    def find_conference(team):
+        for conf_name, teams in confs.items():
+            if team in teams:
+                return conf_name
+        return None
+    
+    conf_a = find_conference(team_a)
+    conf_b = find_conference(team_b)
+    
+    return "Yes" if conf_a == conf_b and conf_a is not None else "No"
 
 for game in game_data:
     if (int(game[0]) != cur_season):
@@ -121,9 +136,11 @@ for game in game_data:
     # Get current ELOs
     rating_a = team_ELOs.get(wteam, base_ELO)
     rating_b = team_ELOs.get(lteam, base_ELO)
-    
+
+    conf_status = are_teams_in_same_conf(confs, wteam, lteam)
+
     # Calculate new ELOs
-    new_elos = calculate_elos(rating_a, rating_b, wscore, lscore, game[6])
+    new_elos = calculate_elos(rating_a, rating_b, wscore, lscore, game[6], conf_status)
     team_ELOs[wteam] = round(new_elos[0], 2)
     team_ELOs[lteam] = round(new_elos[1], 2)
 

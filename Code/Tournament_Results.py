@@ -2,7 +2,7 @@ import csv
 
 # Read the CSV data into a list of dictionaries.
 data = []
-with open('tournament_progress.csv', newline='') as csvfile:
+with open('Data/tournament_progress.csv', newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         # Convert numeric values from strings to integers.
