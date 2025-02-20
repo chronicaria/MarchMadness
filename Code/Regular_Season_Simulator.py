@@ -16,7 +16,7 @@ with open(results, newline='') as file:
 # Convert to dict
 rating_dict = {}
 for i in rating_data:
-    rating_dict[i[0]] = float(i[1])
+    rating_dict[i[0]] = int(float(i[1]))
 
 schedule = 'Data/2025_cleaned_schedule.csv'
 schedule_data = []
@@ -67,25 +67,25 @@ for game in schedule_data:
     Expected_A = 1 / (1 + 10**((Rating_B - (Rating_A + game_home_advantage))/500))
     Expected_B = 1 / (1 + 10**(((Rating_A + game_home_advantage) - Rating_B)/500))
     
-    rating_dict[game[1]] = round(Rating_A + (k * multiplier) * (Win_A - Expected_A), 2)
-    rating_dict[game[3]] = round(Rating_B + (k * multiplier) * (Win_B - Expected_B), 2)
+    rating_dict[game[1]] = int(Rating_A + (k * multiplier) * (Win_A - Expected_A))
+    rating_dict[game[3]] = int(Rating_B + (k * multiplier) * (Win_B - Expected_B))
 
 # Sort teams by ELO in descending order
 sorted_teams = sorted(rating_dict.items(), key=lambda x: x[1], reverse=True)
 
-# Print teams
+# Print teams (corrected formatting)
 for i, (team, elo) in enumerate(sorted_teams, start=1):
-    wins, losses = record_data.get(team,[0, 0])
-    if (wins == 0 & losses == 0):
+    wins, losses = record_data.get(team, [0, 0])
+    if wins == 0 and losses == 0:  # Fix: Use 'and' instead of bitwise '&'
         continue
-    print(f"{i}. {team} ({wins}-{losses}): {elo:.2f}")
+    print(f"{i}. {team} ({wins}-{losses}): {elo}")  # Removed .2f
 
-# Save to CSV
+# Save to CSV (corrected ELO formatting)
 with open('Data/Final_Team_ELOs.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(["Ranking", "Team", "Wins", "Losses", "ELO"])
     for i, (team, elo) in enumerate(sorted_teams, start=1):
-        wins, losses = record_data.get(team,[0, 0])
-        if (wins == 0 & losses == 0):
+        wins, losses = record_data.get(team, [0, 0])
+        if wins == 0 and losses == 0:  # Fix: Use 'and' instead of bitwise '&'
             continue
-        writer.writerow([i, team, wins, losses, f"{elo:.2f}"])
+        writer.writerow([i, team, wins, losses, elo])  # Write integer directly

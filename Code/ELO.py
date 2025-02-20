@@ -1,5 +1,5 @@
 # Men's
-# 11.458, 0.3, 8.953 -> 11.462, 0.304, 8.752
+# 11.456, 0.3, 8.748
 
 
 # 1. Convert CSV into 2-D List, skipping the header
