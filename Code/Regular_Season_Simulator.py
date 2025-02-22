@@ -35,7 +35,7 @@ home_advantage = 150
 spread_factor = 40
 error_sd = 8.953
 
-start_date = "2025-02-19"
+start_date = "2025-02-22"
 
 record_data = {} # Team, array[win, loss]
 for i in rating_dict:

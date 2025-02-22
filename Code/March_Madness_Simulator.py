@@ -69,7 +69,7 @@ with open('Data/Bracket.csv', newline='') as file:
 # Region,Seed,Team
 # e.g., South,1,Auburn
 
-start_date = "2025-02-19"  # Only simulate games on or after this date
+start_date = "2025-02-22"  # Only simulate games on or after this date
 simulations = 10000
 simulation_records = {}  # Cumulative simulation records for season stats
 game_results = {}
@@ -132,7 +132,7 @@ for i in range(simulations):
             game_results[(game[0], home_team, away_team, location)][1] += 1  # Away team win
     
     # --- Bracket Simulation (First Four Example) ---
-    update_bracket(11, 12, 0, 11)  # South: 12th seed matchup
+    update_bracket(10, 11, 0, 10)  # South: 11th seed matchup
     update_bracket(16, 17, 0, 15)  # South: 16th seed matchup
     update_bracket(60, 61, 3, 10)  # East: 11th seed matchup
     update_bracket(66, 67, 3, 15)  # East: 16th seed matchup
