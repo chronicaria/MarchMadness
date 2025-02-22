@@ -14,10 +14,10 @@ team_dict = {row[1]: float(row[4]) for row in team_data}
 record_dict = {row[1]: [int(row[2]), int(row[3])] for row in team_data}
 
 # --- ELO Parameters ---
-k = 60
-home_advantage = 150
+k = 50
+home_advantage = 140
 spread_factor = 40
-error_sd = 8.953
+error_sd = 8.948
 
 # --- Define Game Simulation Function ---
 def simulate_game(team_A, team_B, location):
@@ -70,7 +70,7 @@ with open('Data/Bracket.csv', newline='') as file:
 # e.g., South,1,Auburn
 
 start_date = "2025-02-22"  # Only simulate games on or after this date
-simulations = 10000
+simulations = 100000
 simulation_records = {}  # Cumulative simulation records for season stats
 game_results = {}
 

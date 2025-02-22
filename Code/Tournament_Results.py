@@ -24,17 +24,19 @@ data.sort(key=lambda x: x['t1'], reverse=True)
 # Print header line.
 print("Team: RD64, RD32, Sweet 16, Elite 8, Final 4, Semi, Title")
 
+simulations = 100000
+
 # Print the results formatted as percentages (dividing by 100) with one decimal place.
 for row in data:
     team = row['Team']
     percentages = [
-        row['t64'] / 100,  # RD64
-        row['t32'] / 100,  # RD32
-        row['t16'] / 100,  # Sweet 16
-        row['t8']  / 100,  # Elite 8
-        row['t4']  / 100,  # Final 4
-        row['t2']  / 100,  # Semi
-        row['t1']  / 100   # Title
+        row['t64'] / (simulations / 100),  # RD64
+        row['t32'] / (simulations / 100),  # RD32
+        row['t16'] / (simulations / 100),  # Sweet 16
+        row['t8']  / (simulations / 100),  # Elite 8
+        row['t4']  / (simulations / 100),  # Final 4
+        row['t2']  / (simulations / 100),  # Semi
+        row['t1']  / (simulations / 100)   # Title
     ]
-    percentages_str = ", ".join(f"{p:.1f}%" for p in percentages)
+    percentages_str = ", ".join(f"{p:.2f}%" for p in percentages)
     print(f"{team}: {percentages_str}")
