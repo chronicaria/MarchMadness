@@ -36,14 +36,14 @@ def generate_html(csv_rankings_path, csv_games_path, csv_tournament_path, output
         # Read and sort data before formatting
         data_rows = list(tournament_reader)
         # Sort by champion count (last column) descending, using index 6 for t1
-        data_rows.sort(key=lambda x: int(x[6]), reverse=True)
+        data_rows.sort(key=lambda x: int(x[7]), reverse=True)
 
         # Format sorted data into percentages
         tournament_rows = []
         for row in data_rows:
             formatted_row = [row[0]]  # Team name
             for value in row[1:]:  # Convert counts to percentages
-                pct = round(int(value) / 1000, 2)
+                pct = round(int(value) / 100, 2)
                 formatted_row.append(f"{pct}%")
             tournament_rows.append(formatted_row)
 
