@@ -53,7 +53,7 @@ def generate_html(csv_rankings_path, csv_games_path, csv_tournament_path, output
 <head>
     <title>Basketball Stats</title>
     <style>
-        body {{ font-family: Arial, sans-serif; margin: 20px; }}
+        body {{ font-family: monospace; margin: 20px; }}
         .tab {{ overflow: hidden; border: 1px solid #ccc; background-color: #f1f1f1; }}
         .tab button {{
             background-color: inherit;
