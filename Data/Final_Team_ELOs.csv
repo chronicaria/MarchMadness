@@ -1,6 +1,6 @@
 Ranking,Team,Wins,Losses,ELO
-1,Auburn,25,2,2360
-2,Houston,23,4,2323
+1,Houston,24,4,2363
+2,Auburn,25,2,2360
 3,Florida,24,3,2275
 4,Duke,24,3,2271
 5,St John's,24,4,2243
@@ -11,15 +11,15 @@ Ranking,Team,Wins,Losses,ELO
 10,Clemson,22,5,2166
 11,Arizona,18,9,2158
 12,St Mary's CA,25,4,2153
-13,Texas Tech,21,6,2147
-14,Maryland,21,6,2119
+13,Maryland,21,6,2119
+14,Texas Tech,21,7,2106
 15,Louisville,21,6,2105
 16,Iowa St,21,6,2076
 17,Missouri,20,7,2068
-18,New Mexico,22,5,2065
-19,Creighton,19,8,2054
-20,Connecticut,18,9,2050
-21,Michigan,20,6,2046
+18,Michigan,21,6,2067
+19,New Mexico,22,5,2065
+20,Creighton,19,8,2054
+21,Connecticut,18,9,2050
 22,Drake,25,3,2030
 23,VCU,22,5,2027
 24,Purdue,19,9,2020
@@ -33,27 +33,27 @@ Ranking,Team,Wins,Losses,ELO
 32,UCLA,20,8,1976
 33,Kentucky,18,9,1966
 34,Memphis,22,5,1965
-35,San Diego St,18,7,1959
-36,Kansas,18,9,1938
+35,Kansas,19,9,1963
+36,San Diego St,18,7,1959
 37,Mississippi,19,8,1936
 38,Xavier,18,10,1933
 39,Boise St,19,8,1932
-40,Baylor,16,11,1928
-41,Illinois,17,11,1926
-42,Colorado St,18,9,1925
-43,Villanova,16,12,1917
-44,Wake Forest,19,8,1910
-45,George Mason,21,6,1907
-46,Yale,18,6,1893
-47,Oregon,20,8,1890
-48,Arkansas,16,11,1890
-49,Santa Clara,19,10,1890
-50,North Carolina,17,11,1887
+40,North Carolina,18,11,1930
+41,Baylor,16,11,1928
+42,Illinois,17,11,1926
+43,Colorado St,18,9,1925
+44,Villanova,16,12,1917
+45,Wake Forest,19,8,1910
+46,George Mason,21,6,1907
+47,Yale,18,6,1893
+48,Oregon,20,8,1890
+49,Arkansas,16,11,1890
+50,Santa Clara,19,10,1890
 51,SMU,20,7,1887
-52,Nebraska,17,10,1882
-53,Oklahoma,17,10,1872
-54,San Francisco,22,7,1870
-55,Indiana,16,11,1861
+52,Oklahoma,17,10,1872
+53,San Francisco,22,7,1870
+54,Indiana,16,11,1861
+55,Nebraska,17,11,1860
 56,Liberty,22,5,1857
 57,Cincinnati,16,11,1852
 58,North Texas,20,6,1850
@@ -82,72 +82,72 @@ Ranking,Team,Wins,Losses,ELO
 81,Loyola-Chicago,18,9,1751
 82,Pittsburgh,16,11,1738
 83,Utah,15,12,1732
-84,McNeese St,22,6,1724
+84,McNeese St,23,6,1728
 85,Minnesota,14,13,1716
 86,Arkansas St,20,9,1709
-87,South Carolina,11,16,1706
-88,Arizona St,13,14,1705
-89,Bradley,22,7,1704
-90,Utah Valley,20,7,1704
-91,Georgetown,16,11,1702
-92,Providence,12,15,1690
-93,UAB,18,9,1689
-94,Stanford,17,10,1688
-95,Oregon St,20,9,1687
-96,Towson,19,10,1682
-97,St Bonaventure,19,9,1681
-98,UNLV,14,13,1679
-99,Lipscomb,20,9,1676
+87,Lipscomb,21,9,1709
+88,South Carolina,11,16,1706
+89,Arizona St,13,14,1705
+90,Bradley,22,7,1704
+91,Utah Valley,20,7,1704
+92,Georgetown,16,11,1702
+93,Providence,12,15,1690
+94,UAB,18,9,1689
+95,Stanford,17,10,1688
+96,Oregon St,20,9,1687
+97,Towson,19,10,1682
+98,St Bonaventure,19,9,1681
+99,UNLV,14,13,1679
 100,Akron,21,6,1674
 101,Wichita St,17,10,1672
-102,Florida St,16,11,1670
-103,FL Atlantic,15,12,1669
-104,Oklahoma St,13,14,1663
-105,Virginia,13,14,1663
-106,LSU,14,13,1661
+102,FL Atlantic,15,12,1669
+103,Oklahoma St,13,14,1663
+104,Virginia,13,14,1663
+105,LSU,14,13,1661
+106,UNC Wilmington,23,7,1656
 107,St Louis,15,12,1654
 108,Jacksonville St,19,9,1647
-109,WI Milwaukee,19,10,1642
-110,UNC Greensboro,19,10,1639
-111,NC State,11,16,1638
-112,Bryant,17,11,1637
-113,Montana,20,8,1635
-114,N Colorado,21,8,1634
-115,G Washington,18,10,1633
-116,Troy,18,10,1632
-117,UCF,14,13,1631
-118,Robert Morris,22,8,1630
-119,S Dakota St,19,10,1620
-120,Col Charleston,21,8,1619
-121,IL Chicago,17,12,1618
-122,North Alabama,20,9,1617
-123,James Madison,19,10,1616
-124,Washington,13,14,1615
-125,Samford,21,8,1615
-126,Central Conn,21,6,1615
-127,Louisiana Tech,18,10,1609
-128,UNC Wilmington,22,7,1606
+109,North Alabama,21,9,1643
+110,WI Milwaukee,19,10,1642
+111,UNC Greensboro,19,10,1639
+112,NC State,11,16,1638
+113,Bryant,17,11,1637
+114,Montana,20,8,1635
+115,N Colorado,21,8,1634
+116,G Washington,18,10,1633
+117,Troy,18,10,1632
+118,UCF,14,13,1631
+119,Robert Morris,22,8,1630
+120,Florida St,16,12,1626
+121,S Dakota St,19,10,1620
+122,Col Charleston,21,8,1619
+123,IL Chicago,17,12,1618
+124,James Madison,19,10,1616
+125,Washington,13,14,1615
+126,Samford,21,8,1615
+127,Central Conn,21,6,1615
+128,Louisiana Tech,18,10,1609
 129,Quinnipiac,17,10,1606
 130,Georgia Tech,13,14,1605
 131,New Mexico St,15,12,1605
 132,MTSU,18,9,1601
 133,Davidson,16,11,1598
 134,ETSU,17,12,1597
-135,Colorado,11,16,1594
-136,Illinois St,17,12,1591
-137,Tulane,15,12,1590
-138,N Dakota St,20,10,1590
-139,Cornell,14,10,1589
-140,Youngstown St,19,11,1583
-141,South Alabama,19,10,1583
-142,Belmont,19,10,1578
-143,Notre Dame,12,15,1576
-144,Kent,18,9,1574
-145,NE Omaha,18,12,1574
-146,Duquesne,11,16,1573
-147,Appalachian St,17,11,1573
-148,UNC Asheville,21,8,1573
-149,Wofford,15,14,1569
+135,Illinois St,17,12,1591
+136,Tulane,15,12,1590
+137,N Dakota St,20,10,1590
+138,Cornell,14,10,1589
+139,Youngstown St,19,11,1583
+140,South Alabama,19,10,1583
+141,Belmont,19,10,1578
+142,Notre Dame,12,15,1576
+143,Kent,18,9,1574
+144,NE Omaha,18,12,1574
+145,Duquesne,11,16,1573
+146,Appalachian St,17,11,1573
+147,UNC Asheville,21,8,1573
+148,Wofford,15,14,1569
+149,Colorado,11,17,1568
 150,California,12,15,1568
 151,PFW,19,10,1566
 152,Cal Baptist,13,13,1559
@@ -156,110 +156,110 @@ Ranking,Team,Wins,Losses,ELO
 155,Kennesaw,16,12,1553
 156,Furman,21,8,1552
 157,Washington St,16,13,1551
-158,UC Santa Barbara,18,10,1549
-159,Syracuse,11,16,1547
-160,Norfolk St,19,8,1546
+158,Norfolk St,20,8,1551
+159,UC Santa Barbara,18,10,1549
+160,Syracuse,11,16,1547
 161,Dartmouth,13,11,1545
 162,East Carolina,16,12,1543
 163,SE Missouri St,19,10,1538
 164,St Thomas MN,20,9,1536
 165,Marshall,17,12,1531
 166,Virginia Tech,12,15,1529
-167,William & Mary,17,12,1529
-168,Lamar,18,10,1527
-169,Cleveland St,19,10,1525
-170,Marist,20,5,1524
-171,Ohio,15,12,1523
-172,San Jose St,13,16,1522
-173,E Kentucky,17,12,1522
-174,Merrimack,15,13,1521
-175,Abilene Chr,14,13,1519
-176,Miami OH,20,7,1518
-177,Vermont,17,11,1517
-178,Boston College,12,15,1514
-179,Brown,13,11,1509
-180,Radford,17,13,1508
-181,UTEP,17,10,1499
-182,FGCU,16,13,1498
-183,Murray St,14,15,1493
-184,S Illinois,12,17,1491
-185,Sam Houston St,11,17,1491
-186,Winthrop,19,10,1489
-187,Loy Marymount,16,13,1488
-188,Drexel,15,14,1487
-189,Princeton,17,9,1485
-190,Campbell,15,14,1484
-191,Elon,17,12,1484
-192,Massachusetts,11,17,1478
-193,Jacksonville,16,12,1474
+167,Cleveland St,19,10,1525
+168,Marist,20,5,1524
+169,Ohio,15,12,1523
+170,San Jose St,13,16,1522
+171,Merrimack,15,13,1521
+172,Abilene Chr,14,13,1519
+173,Miami OH,20,7,1518
+174,Vermont,17,11,1517
+175,Boston College,12,15,1514
+176,Brown,13,11,1509
+177,Radford,17,13,1508
+178,FGCU,17,13,1506
+179,E Kentucky,17,13,1501
+180,UTEP,17,10,1499
+181,Jacksonville,17,12,1494
+182,Murray St,14,15,1493
+183,S Illinois,12,17,1491
+184,Sam Houston St,11,17,1491
+185,Winthrop,19,10,1489
+186,Loy Marymount,16,13,1488
+187,Drexel,15,14,1487
+188,Princeton,17,9,1485
+189,Campbell,15,14,1484
+190,Elon,17,12,1484
+191,Massachusetts,11,17,1478
+192,William & Mary,17,13,1478
+193,Hampton,16,14,1476
 194,UT Arlington,13,14,1471
 195,Portland St,16,12,1471
-196,Hampton,15,14,1467
+196,S Carolina St,15,12,1471
 197,Temple,14,14,1466
 198,UC Davis,15,13,1466
 199,Rice,13,15,1461
 200,South Florida,13,15,1457
 201,Ark Little Rock,18,11,1457
-202,S Carolina St,14,12,1456
-203,Indiana St,13,16,1454
-204,Portland,11,18,1454
-205,Oakland,13,16,1453
+202,Indiana St,13,16,1454
+203,Portland,11,18,1454
+204,Oakland,13,16,1453
+205,Monmouth NJ,11,18,1453
 206,DePaul,11,17,1452
 207,Bucknell,15,14,1451
-208,Southern Univ,18,9,1444
-209,WKU,15,12,1443
-210,Cal Poly,11,17,1439
-211,Monmouth NJ,10,18,1436
-212,SE Louisiana,18,10,1432
+208,Lamar,18,11,1450
+209,Southern Univ,18,9,1444
+210,WKU,15,12,1443
+211,Cal Poly,11,17,1439
+212,Nicholls St,18,11,1428
 213,Toledo,16,11,1427
 214,Maine,16,12,1425
 215,Seattle,10,16,1423
 216,Evansville,11,18,1421
-217,Nicholls St,17,11,1420
-218,Montana St,12,16,1415
-219,Idaho St,13,13,1410
-220,Northeastern,15,13,1410
-221,Seton Hall,7,20,1409
-222,Wyoming,12,16,1405
-223,South Dakota,17,12,1404
-224,Richmond,10,18,1403
-225,Mt St Mary's,17,10,1402
-226,C Michigan,12,15,1399
-227,American Univ,18,11,1399
-228,Georgia St,13,16,1398
-231,Siena,13,15,1386
-232,Harvard,10,14,1385
-233,SIUE,19,10,1372
-234,Hawaii,14,13,1368
-235,Manhattan,13,12,1368
-236,Texas St,15,14,1366
-237,Hofstra,13,16,1365
-238,Northern Arizona,16,13,1364
-239,Longwood,17,12,1361
-240,UT San Antonio,10,17,1360
-241,Valparaiso,13,16,1360
-242,N Kentucky,14,15,1360
-243,TAM C. Christi,17,12,1360
-244,Queens NC,17,12,1358
-245,MA Lowell,16,12,1357
-246,Tennessee St,14,15,1357
-247,SF Austin,14,14,1350
-248,E Michigan,14,13,1349
-249,CS Bakersfield,12,17,1345
-250,Ga Southern,14,15,1345
-251,Miami FL,6,21,1341
-252,Fordham,11,16,1339
-253,Binghamton,15,14,1339
-254,Tarleton St,11,17,1338
-255,Iona,12,16,1333
-256,Penn,7,17,1332
-257,Idaho,12,16,1332
-258,Charlotte,10,17,1328
-259,Missouri St,9,20,1319
-260,North Florida,15,14,1317
-261,E Washington,10,18,1305
-262,Tulsa,11,17,1304
-263,VMI,13,16,1298
+217,Montana St,12,16,1415
+218,Idaho St,13,13,1410
+219,Seton Hall,7,20,1409
+220,Wyoming,12,16,1405
+221,South Dakota,17,12,1404
+222,Richmond,10,18,1403
+223,Mt St Mary's,17,10,1402
+224,SE Louisiana,18,11,1400
+225,C Michigan,12,15,1399
+226,American Univ,18,11,1399
+227,Georgia St,13,16,1398
+228,Queens NC,18,12,1398
+230,Northeastern,15,14,1392
+232,Siena,13,15,1386
+233,Harvard,10,14,1385
+234,SIUE,19,10,1372
+235,Hawaii,14,13,1368
+236,Manhattan,13,12,1368
+237,Texas St,15,14,1366
+238,Hofstra,13,16,1365
+239,Northern Arizona,16,13,1364
+240,Longwood,17,12,1361
+241,UT San Antonio,10,17,1360
+242,Valparaiso,13,16,1360
+243,N Kentucky,14,15,1360
+244,MA Lowell,16,12,1357
+245,Tennessee St,14,15,1357
+246,TAM C. Christi,17,13,1351
+247,E Michigan,14,13,1349
+248,CS Bakersfield,12,17,1345
+249,Ga Southern,14,15,1345
+250,Miami FL,6,21,1341
+251,Fordham,11,16,1339
+252,Binghamton,15,14,1339
+253,Tarleton St,11,17,1338
+254,Iona,12,16,1333
+255,Penn,7,17,1332
+256,Idaho,12,16,1332
+257,Charlotte,10,17,1328
+258,Missouri St,9,20,1319
+259,North Florida,15,15,1308
+260,E Washington,10,18,1305
+261,Tulsa,11,17,1304
+262,VMI,13,16,1298
+263,Incarnate Word,15,14,1295
 264,Tennessee Tech,15,14,1290
 265,Army,16,12,1289
 266,La Salle,12,15,1287
@@ -267,101 +267,101 @@ Ranking,Team,Wins,Losses,ELO
 268,Ball St,14,13,1282
 269,Pepperdine,10,19,1281
 270,SUNY Albany,14,14,1280
-271,Delaware St,13,12,1275
-272,Austin Peay,13,16,1272
+271,Delaware St,14,12,1280
+272,SF Austin,14,15,1278
 273,Presbyterian,12,17,1271
 274,UMBC,13,16,1264
 275,LIU Brooklyn,14,15,1263
 276,Louisiana,11,18,1258
 277,Sacred Heart,12,15,1258
 278,Wright St,13,16,1256
-279,TX Southern,12,15,1249
-280,Gardner Webb,10,17,1247
-281,St Peter's,10,14,1244
-282,Colgate,12,17,1242
-283,Augusta,0,1,1242
-285,Columbia,12,12,1239
-286,Fresno St,5,23,1238
-287,Mercer,12,17,1234
-288,Florida Intl,8,19,1231
-289,Howard,12,15,1231
-290,Florida A&M,12,13,1228
+279,TX Southern,13,15,1255
+280,Northwestern LA,14,15,1251
+281,Gardner Webb,10,17,1247
+282,St Peter's,10,14,1244
+283,Colgate,12,17,1242
+284,Augusta,0,1,1242
+286,Columbia,12,12,1239
+287,Fresno St,5,23,1238
+288,Austin Peay,13,17,1238
+289,Mercer,12,17,1234
+290,Florida Intl,8,19,1231
 291,Navy,11,18,1220
-292,Northwestern LA,13,15,1220
-293,Incarnate Word,14,14,1219
-294,North Dakota,11,18,1218
-295,Missouri KC,11,18,1214
-296,St Francis PA,12,17,1211
-297,Delaware,12,17,1208
-298,W Carolina,8,19,1203
+292,North Dakota,11,18,1218
+293,Bethune-Cookman,13,15,1215
+294,Missouri KC,11,18,1214
+295,St Francis PA,12,17,1211
+296,Delaware,12,17,1208
+297,W Carolina,8,19,1203
+298,Houston Chr,12,17,1203
 299,Mercyhurst,14,16,1202
 300,TN Martin,12,17,1197
-301,Bethune-Cookman,12,15,1196
-302,W Michigan,9,18,1195
-303,Air Force,4,23,1191
-304,UTRGV,14,14,1188
-305,Utah Tech,6,21,1185
-306,Southern Utah,11,16,1184
-307,Boston Univ,14,15,1184
-308,Fairfield,10,17,1183
-309,Morgan St,11,15,1180
-310,Loyola MD,11,16,1180
-311,Stonehill,14,15,1180
-312,F Dickinson,11,18,1179
-313,Pacific,9,22,1177
-314,Long Beach St,7,21,1166
-315,Southern Miss,10,19,1165
-316,Weber St,10,19,1164
-317,Rider,10,18,1162
-318,Old Dominion,11,18,1161
-319,Lafayette,11,18,1159
+301,W Michigan,9,18,1195
+302,Air Force,4,23,1191
+303,Utah Tech,6,21,1185
+304,Southern Utah,11,16,1184
+305,Boston Univ,14,15,1184
+306,Fairfield,10,17,1183
+307,UTRGV,14,15,1183
+308,Loyola MD,11,16,1180
+309,Stonehill,14,15,1180
+310,F Dickinson,11,18,1179
+311,Pacific,9,22,1177
+312,Morgan St,11,16,1174
+313,Long Beach St,7,21,1166
+314,Southern Miss,10,19,1165
+315,Weber St,10,19,1164
+316,Rider,10,18,1162
+317,Old Dominion,11,18,1161
+318,Lafayette,11,18,1159
+319,Florida A&M,12,14,1158
 320,Bowling Green,11,16,1157
 321,Oral Roberts,7,20,1156
 322,Charleston So,10,20,1155
-323,Lehigh,10,17,1153
-324,Alcorn St,8,19,1150
-326,Niagara,10,17,1149
-327,New Hampshire,8,21,1146
-328,Alabama St,13,14,1144
+323,Howard,12,16,1154
+324,Lehigh,10,17,1153
+325,Alcorn St,8,19,1150
+327,Niagara,10,17,1149
+328,New Hampshire,8,21,1146
 329,IUPUI,9,20,1133
-330,Houston Chr,11,17,1132
-331,Hardin-Simmons,0,1,1129
-333,NC Central,11,15,1117
-334,Lindenwood,14,15,1115
+330,Hardin-Simmons,0,1,1129
+331,Alabama St,13,15,1124
+333,Lindenwood,14,15,1115
+334,NC Central,11,16,1111
 335,Wagner,14,13,1110
 336,E Illinois,10,19,1107
-337,Bellarmine,5,24,1101
-338,ULM,7,22,1091
-339,Cent Arkansas,8,21,1086
-340,Stony Brook,7,22,1084
-341,Denver,10,19,1084
-342,Coastal Car,9,20,1083
-343,Holy Cross,13,16,1079
-344,San Diego,4,25,1077
-346,CS Fullerton,6,22,1060
+337,ULM,7,22,1091
+338,Bellarmine,5,25,1087
+339,Denver,10,19,1084
+340,Coastal Car,9,20,1083
+341,Holy Cross,13,16,1079
+342,San Diego,4,25,1077
+344,Stony Brook,7,23,1074
+345,CS Fullerton,6,22,1060
+346,Cent Arkansas,8,22,1059
 348,NC A&T,7,22,1053
 349,NJIT,5,23,1050
 350,Grambling,9,18,1045
-351,West Georgia,5,24,1044
-352,Southern Indiana,10,18,1040
+351,Southern Indiana,10,18,1040
+352,Stetson,8,22,1035
 353,Morehead St,14,15,1024
-354,Stetson,7,22,1022
+354,Alabama A&M,10,18,1018
 355,Detroit,8,21,1016
 356,CS Sacramento,7,21,1012
 357,SC Upstate,6,23,1009
 359,Canisius,3,24,1004
-361,WI Green Bay,3,26,988
-362,W Illinois,10,19,977
-363,N Illinois,5,22,967
-364,Buffalo,8,19,956
-365,Citadel,5,22,949
-366,Alabama A&M,9,18,949
-368,Le Moyne,9,20,929
-369,East Texas A&M,3,25,916
-371,Coppin St,4,21,903
+360,West Georgia,5,25,1003
+362,WI Green Bay,3,26,988
+363,Coppin St,5,21,979
+364,W Illinois,10,19,977
+365,N Illinois,5,22,967
+366,Buffalo,8,19,956
+367,Citadel,5,22,949
+369,East Texas A&M,4,25,934
+370,Le Moyne,9,20,929
 372,Chicago St,4,25,901
-375,MD E Shore,4,21,850
-377,New Orleans,4,24,823
-378,Prairie View,4,23,799
-379,Ark Pine Bluff,5,22,783
-380,MS Valley St,3,24,627
+376,MD E Shore,4,22,834
+377,Prairie View,5,23,812
+378,New Orleans,4,25,804
+379,Ark Pine Bluff,5,23,776
+380,MS Valley St,3,25,613
