@@ -192,3 +192,27 @@ with open('Team_ELOs.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(["Team", "ELO"])
     writer.writerows(sorted_teams)
+
+import matplotlib.pyplot as plt
+
+# Compute the running average with a window size of 100
+window_size = 100
+running_avg = np.convolve(brier_scores, np.ones(window_size) / window_size, mode='valid')
+
+# Create x values
+x_values = np.arange(len(brier_scores))
+x_running_avg = np.arange(window_size - 1, len(brier_scores))  # Align with the valid convolution output
+
+# Plot scatter and running average line
+plt.figure(figsize=(10, 5))
+plt.scatter(x_values, brier_scores, color='blue', marker='o', alpha=0.5, label="Data Points")
+plt.plot(x_running_avg, running_avg, color='red', linewidth=2, label=f"Running Average (window={window_size})")
+
+# Labels, title, and legend
+plt.xlabel("Index")
+plt.ylabel("Value")
+plt.title("Scatter Plot with Running Average")
+plt.legend()
+
+# Show the plot
+plt.show()

@@ -69,7 +69,7 @@ with open('Data/Bracket.csv', newline='') as file:
 # Region,Seed,Team
 # e.g., South,1,Auburn
 
-start_date = "2025-02-25"  # Only simulate games on or after this date
+start_date = "2025-02-26"  # Only simulate games on or after this date
 simulations = 10000
 simulation_records = {}  # Cumulative simulation records for season stats
 game_results = {}
