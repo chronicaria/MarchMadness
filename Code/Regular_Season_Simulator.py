@@ -71,13 +71,16 @@ for game in schedule_data:
     rating_dict[game[3]] = int(Rating_B + (k * multiplier) * (Win_B - Expected_B))
 
 # Sort teams by ELO in descending order
+for i in list(rating_dict):
+    wins, losses = record_data.get(i, [0,0])
+    if (wins+losses <= 1):
+        del rating_dict[i]
+
 sorted_teams = sorted(rating_dict.items(), key=lambda x: x[1], reverse=True)
 
 # Print teams (corrected formatting)
 for i, (team, elo) in enumerate(sorted_teams, start=1):
     wins, losses = record_data.get(team, [0, 0])
-    if wins == 0 and losses == 0:  # Fix: Use 'and' instead of bitwise '&'
-        continue
     print(f"{i}. {team} ({wins}-{losses}): {elo}")  # Removed .2f
 
 # Save to CSV (corrected ELO formatting)
@@ -86,6 +89,4 @@ with open('Data/Final_Team_ELOs.csv', mode='w', newline='') as file:
     writer.writerow(["Ranking", "Team", "Wins", "Losses", "ELO"])
     for i, (team, elo) in enumerate(sorted_teams, start=1):
         wins, losses = record_data.get(team, [0, 0])
-        if wins == 0 and losses == 0:  # Fix: Use 'and' instead of bitwise '&'
-            continue
         writer.writerow([i, team, wins, losses, elo])  # Write integer directly

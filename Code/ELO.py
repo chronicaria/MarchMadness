@@ -1,5 +1,5 @@
 # Men's
-# 11.456, 0.3, 8.748
+# 11.393, 0.3, 8.834
 
 
 # 1. Convert CSV into 2-D List, skipping the header
@@ -14,14 +14,23 @@ with open(results, newline='') as file:
     for row in csv_reader:
         game_data.append(row)
 
+# ap preseason poll data
+preseason_results = 'Data/AP_Preseason_Polls.csv'  
+preseason_poll_data = []
+with open(preseason_results, newline='') as file:
+    csv_reader = csv.reader(file)
+    headers = next(csv_reader)  # skip header row
+    for row in csv_reader:
+        preseason_poll_data.append(row)
+
 # 2. ELO Variables
 base_ELO = 1500
 reversion_factor = 1/3
 k = 50
 home_advantage = 140
 spread_factor = 40
-in_conference_multiplier = 0.75
-out_conference_multiplier = 1.25
+in_conference_multiplier = 0.7
+out_conference_multiplier = 1.3
 
 # 3. Find the Teams and Index them
 team_data =[]
@@ -62,8 +71,6 @@ def calculate_elos(Rating_A, Rating_B, Score_A, Score_B, WLoc, Conf):
     spread_differential = round(actual_spread - expected_spread, 2)
     error_list.append(spread_differential)
 
-    # multiplier = 1  # Simplified for this example
-    # if in-conference vs out-of-conference
     multiplier = np.log(Pd/3 + 1) * (2 / ((Rating_A - Rating_B)*.001+2)) #2.2
     if (Conf == "Yes"):
         multiplier *= in_conference_multiplier
@@ -98,6 +105,15 @@ def yearly_reset():
     # 1985,1102,wac
     # 1985,1103,ovc
     # 1985,1104,sec
+
+    # adjust based on ap preseason poll
+    # +(26-x)*10, 20?
+    for i in preseason_poll_data:
+        if (int(i[0]) == cur_season):
+            # team-key from value
+            team_id = [key for key, val in team_dict.items() if val == i[2]][0]
+            team_ELOs[team_id] += (26-int(i[1]))*5
+
     for conf in confs:
         id_list = confs[conf]
         conf_avg = 0
@@ -109,6 +125,8 @@ def yearly_reset():
 
         for id in id_list: # reversion to conf average
             team_ELOs[id] -= (team_ELOs[id] - conf_avg) * reversion_factor
+
+
 def are_teams_in_same_conf(confs, team_a, team_b):
     def find_conference(team):
         for conf_name, teams in confs.items():
@@ -173,46 +191,8 @@ print("RMSE: " + str(rmse))
 print("BSS: " + str(round(brier_skill_score,3)))
 print("Error SD: " + str(error_sd))
 
-bss_2025 = 1 - (round(sum(brier_scores[-3482:]) / len(brier_scores[-3482:]),3) / 0.25)
-mse_2025 = 0
-for x in error_list[-3482:]:
-    mse_2025 += x*x
-mse_2025 /= len(error_list[-3482:])
-rmse_2025 = round(np.sqrt(mse_2025), 3)
-
-error_sd_2025 = round(np.std(error_list[-3482:]),3)
-
-print("_")
-print("RMSE 2025: " + str(rmse_2025))
-print("BSS 2025: " + str(round(bss_2025,3)))
-print("Error SD 2025: " + str(error_sd_2025))
-
 export_list = [list(item) for item in sorted_teams]
 with open('Team_ELOs.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(["Team", "ELO"])
     writer.writerows(sorted_teams)
-
-import matplotlib.pyplot as plt
-
-# Compute the running average with a window size of 100
-window_size = 100
-running_avg = np.convolve(brier_scores, np.ones(window_size) / window_size, mode='valid')
-
-# Create x values
-x_values = np.arange(len(brier_scores))
-x_running_avg = np.arange(window_size - 1, len(brier_scores))  # Align with the valid convolution output
-
-# Plot scatter and running average line
-plt.figure(figsize=(10, 5))
-plt.scatter(x_values, brier_scores, color='blue', marker='o', alpha=0.5, label="Data Points")
-plt.plot(x_running_avg, running_avg, color='red', linewidth=2, label=f"Running Average (window={window_size})")
-
-# Labels, title, and legend
-plt.xlabel("Index")
-plt.ylabel("Value")
-plt.title("Scatter Plot with Running Average")
-plt.legend()
-
-# Show the plot
-plt.show()
