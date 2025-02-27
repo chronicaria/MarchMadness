@@ -71,6 +71,7 @@ def calculate_elos(Rating_A, Rating_B, Score_A, Score_B, WLoc, Conf):
     spread_differential = round(actual_spread - expected_spread, 2)
     error_list.append(spread_differential)
 
+    multiplier = 1
     multiplier = np.log(Pd/3 + 1) * (2 / ((Rating_A - Rating_B)*.001+2)) #2.2
     if (Conf == "Yes"):
         multiplier *= in_conference_multiplier

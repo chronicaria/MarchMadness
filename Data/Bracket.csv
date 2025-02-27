@@ -1,69 +1,69 @@
 Region,Seed,Team
 South,1,Auburn
-South,2,Houston
+South,2,Michigan St
 South,3,Kentucky
-South,4,Michigan St
-South,5,Marquette
-South,6,Louisville
+South,4,Arizona
+South,5,Oregon
+South,6,Kansas
 South,7,Memphis
-South,8,Gonzaga
-South,9,New Mexico
-South,10,Nebraska
-South,11,Arkansas
-South,11,VCU
-South,12,McNeese St
-South,13,High Point
-South,14,Chattanooga
-South,15,Montana
-South,16,NE Omaha
-South,16,SE Missouri St
+South,8,Creighton
+South,9,Gonzaga
+South,10,Vanderbilt
+South,11,Ohio St
+South,12,Drake
+South,13,Akron
+South,14,James Madison
+South,15,Robert Morris
+South,16,Southern Univ
+South,16,American Univ
 Midwest,1,Alabama
-Midwest,2,Wisconsin
-Midwest,3,Arizona
+Midwest,2,Houston
+Midwest,3,Wisconsin
 Midwest,4,St John's
 Midwest,5,Maryland
-Midwest,6,Mississippi
-Midwest,7,Kansas
-Midwest,8,Oregon
+Midwest,6,Marquette
+Midwest,7,Mississippi St
+Midwest,8,Illinois
 Midwest,9,Baylor
-Midwest,10,Ohio St
-Midwest,11,UC San Diego
-Midwest,12,Drake
-Midwest,13,Jacksonville St
-Midwest,14,Utah Valley
-Midwest,15,Norfolk St
+Midwest,10,San Diego St
+Midwest,11,Nebraska
+Midwest,11,Oklahoma
+Midwest,12,Yale
+Midwest,13,High Point
+Midwest,14,Chattanooga
+Midwest,15,Montana
 Midwest,16,Bryant
 West,1,Florida
 West,2,Iowa St
 West,3,Texas A&M
-West,4,Michigan
-West,5,Mississippi St
-West,6,Clemson
-West,7,Illinois
-West,8,Connecticut
+West,4,Purdue
+West,5,Clemson
+West,6,UCLA
+West,7,Mississippi
+West,8,BYU
 West,9,Utah St
-West,10,San Diego St
-West,11,BYU
-West,12,Yale
-West,13,Lipscomb
-West,14,South Alabama
-West,15,Cleveland St
-West,16,Quinnipiac
+West,10,VCU
+West,11,Arkansas
+West,11,Wake Forest
+West,12,UC San Diego
+West,13,Jacksonville St
+West,14,Towson
+West,15,Norfolk St
+West,16,NE Omaha
 East,1,Duke
 East,2,Tennessee
 East,3,Texas Tech
-East,4,Purdue
+East,4,Michigan
 East,5,Missouri
-East,6,UCLA
-East,7,St Mary's CA
-East,8,Creighton
-East,9,Texas
+East,6,St Mary's CA
+East,7,Louisville
+East,8,New Mexico
+East,9,Connecticut
 East,10,West Virginia
-East,11,Vanderbilt
-East,11,Wake Forest
-East,12,George Mason
-East,13,Akron
-East,14,Towson
+East,11,Texas
+East,12,McNeese St
+East,13,Lipscomb
+East,14,Utah Valley
 East,15,Central Conn
-East,16,Southern Univ
-East,16,American Univ
+East,16,Marist
+East,16,SE Missouri St

@@ -132,9 +132,9 @@ for i in range(simulations):
             game_results[(game[0], home_team, away_team, location)][1] += 1  # Away team win
     
     # --- Bracket Simulation (First Four Example) ---
-    update_bracket(10, 11, 0, 10)  # South: 11th seed matchup
+    update_bracket(27, 28, 0, 10)  # Midwest: 11th seed matchup
     update_bracket(16, 17, 0, 15)  # South: 16th seed matchup
-    update_bracket(60, 61, 3, 10)  # East: 11th seed matchup
+    update_bracket(44, 45, 3, 10)  # West: 11th seed matchup
     update_bracket(66, 67, 3, 15)  # East: 16th seed matchup
 
     # --- Tournament Simulation: Round of 64 ---
